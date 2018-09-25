@@ -5,9 +5,9 @@ namespace Lab1___Discounts.Entity.Products
     public interface IProduct
     {
         string ProductName { get; }
-
         double Price { get; }
-
         IDiscount Discount { get; }
+        ProductKind ProductKind { get; }
+        bool IsDiscountApplied { get; }
     }
 }
