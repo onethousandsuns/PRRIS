@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Lab1___Discounts.Entity.Carts;
 using Lab1___Discounts.Entity.Products;
 
 namespace Lab1___Discounts.Entity.Discounts
@@ -8,6 +9,6 @@ namespace Lab1___Discounts.Entity.Discounts
         string Name { get; }
         decimal Value { get; }
 
-        List<int> Apply( List<IProduct> products );
+        List<int> ApplyToProducts( List<IProduct> products );
     }
 }

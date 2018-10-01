@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Lab1___Discounts.Entity.Carts;
 using Lab1___Discounts.Entity.Products;
 
 namespace Lab1___Discounts.Entity.Discounts
@@ -10,10 +11,11 @@ namespace Lab1___Discounts.Entity.Discounts
         {
         }
 
-        public override List<int> Apply( List<IProduct> products )
+        public override List<int> ApplyToProducts( List<IProduct> products )
         {
-            base.Apply( products );
-            
+            IProduct productA = cart.GetNotApplicatedByDiscountProductByProductKind( ProductKind.A );
+            IProduct productC = cart.GetNotApplicatedByDiscountProductByProductKind( ProductKind.C );
+
             return new List<int>();
         }
     }

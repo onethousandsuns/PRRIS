@@ -43,14 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\Carts\ICart.cs" />
+    <Compile Include="Entity\Carts\ProductCart.cs" />
+    <Compile Include="Entity\Discounts\BaseDiscount.cs" />
+    <Compile Include="Entity\Discounts\Discount_1.cs" />
+    <Compile Include="Entity\Discounts\IDiscount.cs" />
+    <Compile Include="Entity\Products\IProduct.cs" />
+    <Compile Include="Entity\Products\Product.cs" />
+    <Compile Include="Entity\Products\ProductKind.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Calculators\CartCalculator.cs" />
+    <Compile Include="Service\Calculators\ICalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entity\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

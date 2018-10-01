@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lab1___Discounts.Entity.Carts;
 using Lab1___Discounts.Entity.Discounts;
 using Lab1___Discounts.Entity.Products;
 using Lab1___Discounts.Service.Calculators;
@@ -17,14 +18,15 @@ namespace Lab1___Discounts
             List<IProduct> products = new List<IProduct>();
             List<IDiscount> discounts = new List<IDiscount>()
             {
-                new Discount_1( 50, "Discount_1" )
+                new Discount_1( 10, "Discount_1" )
             };
 
-            ICalculator cartCalculator = new CartCalculator( products, discounts );
+            ProductCart productCart = new ProductCart( products, discounts );
+            CartCalculator cartCalculator = new CartCalculator( productCart );
 
             Console.WriteLine( String.Format( "Products: {0} /n", products.ToString() ) );
             Console.WriteLine( String.Format( "Discounts: {0} /n", discounts ) );
-            Console.WriteLine( cartCalculator.Calculate().ToString() );
+            Console.WriteLine(cartCalculator.Calculate().ToString() );
             Console.ReadLine();
         }
     }

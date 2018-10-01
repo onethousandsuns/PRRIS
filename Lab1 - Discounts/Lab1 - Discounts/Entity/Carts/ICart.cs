@@ -7,8 +7,9 @@ using Lab1___Discounts.Entity.Products;
 
 namespace Lab1___Discounts.Entity.Carts
 {
-    interface ICart
+    public interface ICart
     {
         List<IProduct> Products { get; }
+        IProduct GetNotApplicatedByDiscountProductByProductKind( ProductKind productKind );
     }
 }
