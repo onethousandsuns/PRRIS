@@ -8,16 +8,21 @@ namespace Lab1___Discounts.Entity.Discounts
     public class BaseDiscount : IDiscount
     {
         public string Name { get; }
-        public decimal Value { get; }
-        public virtual List<int> ApplyToProducts( List<IProduct> products )
+        public decimal DiscountValue { get; }
+        public virtual List<int> ApplyToProducts( ICartHandler cartHandler )
         {
             return new List<int>();
         }
 
         public BaseDiscount( decimal value, string name)
         {
-            Value = value;
+            DiscountValue = value;
             Name = name;
+        }
+
+        public double GetPercentageDiscountValue( double price, decimal discountValue )
+        {
+            return price / 100 * (double) discountValue;
         }
     }
 }

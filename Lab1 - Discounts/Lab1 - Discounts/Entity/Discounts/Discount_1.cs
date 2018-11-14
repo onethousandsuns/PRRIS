@@ -11,10 +11,25 @@ namespace Lab1___Discounts.Entity.Discounts
         {
         }
 
-        public override List<int> ApplyToProducts( List<IProduct> products )
+        public override List<int> ApplyToProducts( ICartHandler cartHandler )
         {
-            IProduct productA = cart.GetNotApplicatedByDiscountProductByProductKind( ProductKind.A );
-            IProduct productC = cart.GetNotApplicatedByDiscountProductByProductKind( ProductKind.C );
+            var productA = cartHandler.GetNotApplicatedByDiscountProductByProductKind( ProductKind.A );
+            var productB = cartHandler.GetNotApplicatedByDiscountProductByProductKind( ProductKind.B );
+
+            if (productA != null && productB != null)
+            {
+                productA.Value.Value.Price -= GetPercentageDiscountValue(productA.Value.Value.Price, DiscountValue);
+                cartHandler.MarkProductAsAppliedByDiscount( productA.Value.Value );
+
+                productB.Value.Value.Price -= GetPercentageDiscountValue(productB.Value.Value.Price, DiscountValue);
+                cartHandler.MarkProductAsAppliedByDiscount( productB.Value.Value );
+
+                return new List<int>
+                {
+                    productA.Value.Key,
+                    productB.Value.Key
+                };
+            }
 
             return new List<int>();
         }

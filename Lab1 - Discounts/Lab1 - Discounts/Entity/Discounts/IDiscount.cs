@@ -7,8 +7,8 @@ namespace Lab1___Discounts.Entity.Discounts
     public interface IDiscount
     {
         string Name { get; }
-        decimal Value { get; }
+        decimal DiscountValue { get; }
 
-        List<int> ApplyToProducts( List<IProduct> products );
+        List<int> ApplyToProducts( ICartHandler cartHandler );
     }
 }

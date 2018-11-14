@@ -43,9 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\Carts\ICart.cs" />
-    <Compile Include="Entity\Carts\ProductCart.cs" />
+    <Compile Include="Entity\Carts\ICartHandler.cs" />
+    <Compile Include="Entity\Carts\ProductCartHandlerHandler.cs" />
     <Compile Include="Entity\Discounts\BaseDiscount.cs" />
+    <Compile Include="Entity\Discounts\Discount_7.cs" />
+    <Compile Include="Entity\Discounts\Discount_6.cs" />
+    <Compile Include="Entity\Discounts\Discount_5.cs" />
+    <Compile Include="Entity\Discounts\Discount_4.cs" />
+    <Compile Include="Entity\Discounts\Discount_3.cs" />
+    <Compile Include="Entity\Discounts\Discount_2.cs" />
     <Compile Include="Entity\Discounts\Discount_1.cs" />
     <Compile Include="Entity\Discounts\IDiscount.cs" />
     <Compile Include="Entity\Products\IProduct.cs" />
@@ -53,7 +59,7 @@
     <Compile Include="Entity\Products\ProductKind.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\Calculators\CartCalculator.cs" />
+    <Compile Include="Service\Calculators\CartPriceCalculator.cs" />
     <Compile Include="Service\Calculators\ICalculator.cs" />
   </ItemGroup>
   <ItemGroup>
