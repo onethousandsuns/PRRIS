@@ -1,4 +1,5 @@
-// Задание - https://docs.google.com/document/d/1RFlHU-aAjaUwC9L7tBdaLY4t5VgQgChTajD632HXjHI/edit
+Бочкарев М.А. ПСм-12
+Задание - https://docs.google.com/document/d/1RFlHU-aAjaUwC9L7tBdaLY4t5VgQgChTajD632HXjHI/edit
 Затраченное время - 2 часа.
 
 Записи записной книги храню в hashset _records, он обеспечивает быструю уникальную вставку новых значений.
